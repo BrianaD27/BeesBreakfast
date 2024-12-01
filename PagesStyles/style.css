@@ -1,0 +1,542 @@
+
+
+:root {
+    /* Color Platte */
+    --tan: #FBF7EC;
+    --gold: #FBB100;
+    --paleYellow: #FDD466;
+    --darkTan: #FCE6B2;
+    --offWhite: #FDF2C3;
+}
+
+body {
+    background-color: var(--tan);
+}
+
+/* Nav Styles */
+.nav {
+    z-index: 1000;
+}
+
+#bee {
+    height: 50px;
+}
+
+#profilePic {
+    height: 30px;
+}
+
+#main {
+    background-color: var(--tan);
+    height: 100vh;
+}
+
+.g1 {
+    color: black;
+    transition: all 0.2s;
+    padding-top: 15px;
+
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:visited {
+    color: inherit;
+}
+
+.g1:hover {
+    border-bottom: 2px solid var(--gold);
+    color: #FBB100;
+    transform: translateY(-5px); 
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.navbar-brand {
+    color: black;
+    
+    span {
+        color: var(--gold);
+    }
+}
+
+.navbar-brand:visited {
+    color: inherit;
+}
+
+.order {
+    background-color: var(--gold);
+    border-radius: 1rem;
+    
+    
+}
+
+.order:hover {
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+
+.container-fluid {
+    padding: 0px 50px;
+}
+/* End of Nav Styles */
+
+/* Main Page Styles */
+.home {
+    height: calc(100vh - 9.25vh);
+}
+
+#home-left {
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 9.25vh);
+   
+
+
+    img {
+        width: 200px;
+        top: 70%;
+        right: 57%;
+    }
+
+    a {
+        background-color: var(--gold);
+        width: 200px;
+        padding: 15px 0px;
+    }
+
+}
+
+
+#home-right {
+    #hexPattern {
+        width: 44em;
+        margin-left: 40px;
+        height: calc(100vh - 9.25vh);
+        
+    }
+    
+    #waffleDish {
+        width: 30rem;
+        top: 15%;
+    
+    }
+}
+
+#menu h1 {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+#menu-title {
+    text-align: center;
+    width: 100%;
+}
+/* End of Main Page Styles */
+
+/* Menu Page Styles */ 
+
+.menu {
+    height: 100vh;
+    background-color: var(--gold);
+    background: url("../Assets/mainBg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+    h1 {
+        padding-left: 0px;
+        color: white;
+        background-color: var(--paleYellow);
+    }
+
+    .toggleDropDown {
+        background-color: transparent;
+        border: none;
+        width: 50px;
+    }
+
+    .dropdown-menu {
+        width: 300px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .menu-item {
+        display: flex;
+        padding-top: 10px;
+        p, h6, img {
+            background-color:  var(--paleYellow);
+        }
+    }
+
+    input {
+        border: 1px rgb(124, 124, 124) solid;
+        border-radius: 3em;
+     }
+
+     #dishButton{
+        background-color: var(--gold);
+
+     }
+
+     #cartContainer {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        
+     }
+
+     #cartIcon {
+        min-width: 100%;
+        min-height: 100%;
+        display: block;
+        
+    }
+
+    #cartNumber {
+        top: -50%;
+        right: -50%;
+        padding-inline: 7px;
+        font-size: 20px;
+    }
+
+}
+
+/* End of Menu Page Styles */
+
+/* Locations Page */
+.locations {
+    height: 100vh;
+    width: 100%;
+    background: url("../Assets/honey.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .leftLocation {
+        #map-container {
+            position: relative !important;
+            width: 730px !important;
+            height: 730px !important;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+            background-color: var(--gold) !important; /* Optional if the map background doesn't fill fully */
+            border: 10px solid var(--gold) !important;
+            overflow: hidden !important; /* Ensures content stays within the hexagon */
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        #map {
+            padding-top: 60px !important;
+            height: 700px !important;
+            width: 700px !important;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%) !important;
+            background-color: white !important; /* Adjust to fit the map's background */
+            border: 10px solid var(--gold) !important; /* Hexagon border */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
+        }
+    }
+
+
+    .rightLocation {
+        
+
+        h1, h2 {
+            text-align: end;
+            font-size: 6em;
+            font-weight: 500;
+        }
+
+        h2 {
+            color: var(--gold);
+        }
+
+        p {
+            text-align: center; 
+        }
+        
+        button {
+            background: var(--gold);
+            border-radius: 10px;
+            border: var(--gold);
+            
+        }
+    }
+}
+
+/* Extra small screens (portrait phones, less than 576px) */
+@media (max-width: 1200px) {
+    section#location .rightLocation h1, h2 {
+      font-size: 4.5rem !important;
+      font-weight: 650;
+    }
+    
+    section#location .rightLocation p {
+        font-size: 1.3rem !important;
+      }
+
+    section#location .leftLocation img {
+        width: 30rem !important;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    section#location .rightLocation h1, h2 {
+        font-size: 3.5rem !important;
+        font-weight: 650;
+      }
+      
+      section#location .rightLocation p {
+          font-size: 1rem !important;
+        }
+  
+      section#location .leftLocation img {
+          width: 30rem !important;
+      }
+  }
+  
+  @media (max-width: 800px) {
+    section#location .rightLocation h1, h2 {
+        font-size: 3.5rem !important;
+        font-weight: 650;
+        align-self: center;
+      }
+      
+      section#location .rightLocation p {
+          font-size: 1rem !important;
+        }
+  
+      section#location .leftLocation img {
+          width: 20rem !important;
+      }
+  } 
+/* End Locations Page Styles */
+
+
+/* Reviews Page Styles */
+.reviews {
+    height: 100vh;
+    width: 100%;
+    .mobile-header {
+        display: none !important;
+    }
+
+    .leftReviews {
+        
+        h1 {
+            font-size: 7em;
+        }
+
+        h2 {
+            font-size: 7em;
+            color: var(--gold);
+        }
+    }
+
+    .line {
+        div {
+            width: 5px;
+            height: 600px;
+            background-color: var(--gold);
+        }
+    }
+
+    .rightReviews {
+        .starContainer {
+            .pfp {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid var(--gold);
+                transition: filter 0.3s ease;
+            }
+
+            .pfp-container:hover .pfp {
+                filter: brightness(70%);
+            }
+
+            .pfp-overlay {
+                position: absolute;
+                top: 314.5%;
+                left: 60%;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+                transition: opacity 0.3s ease;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            .pfp-container:hover .pfp-overlay {
+                opacity: 10;
+            }
+
+            #file-input {
+                display: none;
+            }
+
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .nameContainer {
+            gap: 30px;
+
+            input {
+                border-radius: 10px;
+            }
+            button {
+                background-color: var(--gold);
+                border-radius: 10px;
+                border-color: var(--gold);
+                border: none;
+                
+            }
+        }
+
+        .bottomForm {
+            textarea {
+                border-radius: 10px;
+                height: 21em;
+                text-align: start;
+            }
+
+            a {
+                background-color: var(--gold);
+                border-radius: 10px;
+                border-color: var(--gold);
+                border: none;
+                text-decoration: none;
+                color: black;
+                text-align: center;
+
+            }
+
+          
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .reviews {
+        .mobile-header {
+            display: none !important;
+        }
+
+        .leftReviews {
+        
+            h1 {
+                font-size: 5em !important;
+            }
+    
+            h2 {
+                font-size: 5em !important;
+                color: var(--gold) !important;
+            }
+        }
+
+        .rightReviews {
+            .starContainer {
+                .pfp {
+                    width: 80px;
+                    height: 80px;
+                }
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+   
+  }
+
+@media (max-width: 1050px) {
+    .reviews {
+        .mobile-header {
+            display: none !important;
+        }
+
+        .leftReviews {
+        
+            h1 {
+                font-size: 5em !important;
+            }
+    
+            h2 {
+                font-size: 5em !important;
+                color: var(--gold) !important;
+            }
+        }
+
+        .rightReviews {
+            .starContainer {
+                .pfp {
+                    width: 50px;
+                    height: 50px;
+                }
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+  
+@media (max-width: 800px) {
+    .reviews {
+        padding: 0px 0px !important;
+
+        .mobile-header {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+            
+            h1 {
+                font-size: 3rem;
+                font-weight: 600;
+            }
+
+            span {
+                color: var(--gold);
+            }
+        }
+
+        
+        .leftReviews {
+            display: none !important;
+        }
+
+        .line {
+            display: none !important;
+        }
+
+        .rightReviews {
+            .starContainer {
+                .pfp {
+                    width: 60px;
+                    height: 60px;
+                }
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+} 
+/* End Reviews Page Styles */
+

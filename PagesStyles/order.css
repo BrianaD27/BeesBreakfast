@@ -1,0 +1,152 @@
+:root {
+    /* Color Platte */
+    --tan: #FBF7EC;
+    --gold: #FBB100;
+    --paleYellow: #FDD466;
+    --darkTan: #FCE6B2;
+    --offWhite: #FDF2C3;
+}
+
+body {
+    background-color: var(--tan);
+}
+
+section {
+    .navbar {
+        padding-top: 20px;
+
+        a {
+            text-decoration: none;
+            color: var(--gold);
+            font-weight: bold;
+            font-size: x-large;
+        }
+    }
+
+    #arrow {
+        height: 30px;
+    }
+
+    #cartContainer {
+        width: 35px;
+        height: 35px;
+        
+     }
+
+     #cartIcon {
+        min-width: 100%;
+        min-height: 100%;
+        display: block;
+        
+    }
+
+    #cartNumber {
+        top: -50%;
+        right: -50%;
+        padding-inline: 7px;
+        font-size: 20px;
+    }
+}
+
+.mainWrapper {
+    
+    .item-card {
+        gap: 20px;
+    }
+
+    .img-container {
+        width: 150px;
+
+        img {
+            width: 150px;
+            object-fit: fill;
+        }
+    }
+
+    h4 {
+        font-weight: 600;
+        
+    }
+
+    #dishButton{
+        background-color: var(--gold);
+
+    }
+
+    button:focus, .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    #x-button-container {
+        padding: 0;
+        width: 40px;
+        top: 0%;
+        left: 103%;
+        
+    }
+
+}
+
+#shopping-cart {
+    overflow-x:visible;
+    overflow-y: auto;
+    text-align: justify;
+    height: 550px;
+    width: 100%;
+    padding: 100px, 0px;  /* Ensure image container adjusts */  /* Limit max width on larger screens */
+
+}
+
+#title {
+    h2 {
+        font-size: 4rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        color: black;
+    }
+
+    button {
+        background-color: var(--gold);
+        border: 1px solid var(--gold);
+        border-radius: 5rem;
+        font-size:2rem;
+        padding-inline: 20px;
+    }
+}
+
+.title {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 200px; /* Adjust the width as needed */
+    text-align: start;
+}
+#label {
+    .btnContainer {
+        gap: 10px;
+    }
+
+    #btn1 {
+        background-color: green;
+        border: 1px solid green;
+        border-radius: 5rem;
+        font-size:1.3rem;
+        padding-inline: 20px;
+        color: white;
+        font-weight: bold;
+    }
+
+    #btn2 {
+        background-color: rgb(233, 2, 2);
+        border: 1px solid rgb(233, 2, 2);
+        border-radius: 5rem;
+        font-size:1.3rem;
+        padding-inline: 20px;
+        color: white;
+        font-weight: bold;
+    }
+}
