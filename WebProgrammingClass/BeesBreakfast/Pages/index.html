@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/BeesBreakfast/PagesStyles/style.css">
+    <title>Bee's Breakfast</title>
+    <link rel="icon" href="../Assets/Bee.png" type="image/png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB06pOIRXZ5Z3donqRuvXx8Zaq4-k_NCbI&libraries=places"></script>
+  </head>
+  <body>
+    <!-- Home Page -->
+    <div id="main">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="#">
+            <img id="bee" src="../Assets/bee.png" alt=""> 
+            Bee's <span class="c">Breakfast</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="navbar-toggler-icon" src="../Assets/hamburgerMenu.png" alt="">
+          </button>
+          <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link g1" aria-current="page" href="#menu">Menu</a></li>
+              <li class="nav-item"><a class="nav-link g1" href="#location">Locations</a></li>
+              <li class="nav-item"><a class="nav-link g1" href="#reviews">Reviews</a></li>
+              <li class="nav-item"><a class="nav-link g1" href="/BeesBreakfast/Pages/reservations.html">Reservations</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="/BeesBreakfast/Pages/login.html">
+                  <img id="profilePic" src="../Assets/personIcon.png" alt="Profile Picture">
+                </a>
+              </li>
+              <li class="nav-item btn order" ><a class="nav-link" href="/BeesBreakfast/Pages/order.html">Order</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="px-5 overflow-hidden">
+        <div class="row home">
+          <div class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content position-relative" id="home-left">
+            <h1 class="display-1 fw-bold">Breakfast Worth <br> <i style="color: #FBB100;">Buzzing</i> About</h1>
+            <p class="text-center fs-4">Try our delicious City Inspired Home-Made <br class=""> breakfast Today!</p>
+            <a  class="btn fs-4" href="#menu">Our Menu</a>
+            <img class="img-fluid position-absolute" src="../Assets/beeWithPath.png" alt="Bee with path">
+          </div>
+
+          <div class="col-12 col-lg-6 position-relative" id="home-right">
+            <img id="hexPattern" class="img-fluid" src="../Assets/hexagonPattern.png" alt="Background hexagon pattern">
+            <img id="waffleDish" class="img-fluid position-absolute" src="../Assets/waffleDish.png" alt="Waffle dish">
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- End of Home Page -->
+    
+    <!-- Menu Page -->
+    <section class="menu position-relative" id="menu">
+      <!-- <img class="position-absolute w-75" id="backgroundBee" src="/Assets/beeWithLargePath.png" alt=""> -->
+      <div class="container">
+        
+        <header class="d-flex flex-row align-items-center justify-content-end mx-0 pt-4">
+          <div class="d-none d-lg-block mx-auto "></div>
+          <div class="d-none d-lg-block mx-auto "></div>
+          <div class="d-none d-lg-block mx-auto "></div>
+          <div class="d-none d-lg-block mx-auto "></div>
+          
+          <div class="mx-5 my-0">
+            <h1 class="text-center mx-auto display-1 fw-bold my-0 bg-transparent">Our Menu</h1>
+          </div>
+
+          <div class="d-none d-lg-block mx-auto "></div>
+
+          <div class="d-flex flex-row">
+            <form class="d-lg-flex d-none">
+              <input class="form-control me-2" id="search-item" onkeyup="search()" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
+            <div class="position-relative w-0" id="cartContainer">
+              <a class="p-0 mx-0 bg-transparent border-0" href="/BeesBreakfast/Pages/order.html">
+                <div id="cartNumber" class="bg-danger text-white position-absolute rounded-pill mb-5">0</div>
+                <img class="w-50 img-fluid" id="cartIcon" src="../Assets/cart.png" alt="">
+              </a>
+            </div>
+
+            <div class="dropdown">
+              <button class="toggleDropDown" type="button" id="dropDownMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="img-fluid p-0 m-0" src="../Assets/hamburgerMenu.png" alt="">
+              </button>
+
+              <ul class="dropdown-menu text-center" aria-labelledby="dropDownMenu">
+                <li class="d-block d-lg-none">
+                  <form class="dropdown-item  d-flex">
+                    <input class="form-control me-2" id="search-item-mobile" onkeyup="searchMobile()" type="search" placeholder="Search" aria-label="Search">
+                  </form>
+                </li>
+                <li><a class="dropdown-item" onclick="sortMenuByPrice('low-to-high')">Price: Low to High</a></li>
+                <li><a class="dropdown-item" onclick="sortMenuByPrice('high-to-low')">Price: High to Low</a></li>
+                <li><a class="dropdown-item" onclick="sortMenuByCals('low-to-high')">Calories: Low to High</a></li>
+                <li><a class="dropdown-item" onclick="sortMenuByCals('high-to-low')">Calories: High to Low</a></li>
+              </ul>
+
+            </div>
+          </div>
+          
+        </header>
+        
+        <div class="menu-list row pt-0" id="menu-list">
+        </div>
+
+      </div>
+
+    </section>
+    <!-- Menu Page -->
+
+    <!-- Locations Page --> 
+     <section id="location" class="locations px-5">
+      <div class=" d-flex h-100 row mx-5">
+        <div class="leftLocation col-lg-8 col-md-7 col-sm-12 col-12 justify-content-start align-items-center d-flex">
+          <div id="map-container"><div id="map"></div></div>
+          
+        </div>
+
+        <div class="rightLocation col-lg-4 col-md-5 col-sm-12 col-12 justify-content-center align-items-end d-flex flex-column">
+          <h1>Come</h1>
+          <h1>Visit Our</h1>
+          <h2 >Hive</h1>
+
+          
+          <p class="fs-4 align-self-center">Type in your Zip-code, City, or State<br>to find restaurants near you. </p>
+
+          <div class="form-group w-100">
+            <input class="form-control rounded py-2" id="searchTextField" onkeyup="searchMobile()" type="input" placeholder="Zip-code, City, State" aria-label="Name">
+          </div>
+
+          <button class="my-4 w-50 py-3 align-self-center fs-5">Search</button>
+        </div>
+      </div>
+     </section>
+
+     <!-- Reviews Page --> 
+     <section id="reviews" class="reviews d-flex justify-content-center align-items-center px-5">
+      <div class="d-flex row w-100 px-5">
+        <div class="leftReviews col-md-5 col-lg-5 d-flex flex-column justify-content-center align-items-start">
+          <h1>Leave</h1>
+          <h1>us a</h1>
+          <h2>Sweet</h2> 
+          <h1>Review </h1>
+        </div>
+
+        <div class="line col-md-2 col-lg-2 d-flex flex-column justify-content-center align-items-center">
+          <div></div>
+        </div>
+
+        <div class="mobile-header">
+          <h1>Leave a <span>Review</span> </h1>
+        </div>
+
+        <div class="rightReviews col-md-5 col-lg-5  d-flex flex-column justify-content-center "> 
+          <div class="starContainer stars d-flex flex-row justify-content-start align-items-center">
+
+            <div class="pfp-container" onclick="document.getElementById('file-input').click()">
+              <img class="pfp img-fluid" id="pfp" src="/BeesBreakfast/Assets/blankPfp.jpeg" alt="" srcset="">
+              <div class="pfp-overlay">Change <br>Photo</div>
+              <input type="file" id="file-input" accept="image/*">
+
+            </div>
+
+            <img data-rating="1" class="star img-fluid" src="/BeesBreakfast/Assets/greyStar.png" alt="">
+            <img data-rating="2" class="star img-fluid" src="/BeesBreakfast/Assets/greyStar.png" alt="">
+            <img data-rating="3" class="star img-fluid" src="/BeesBreakfast/Assets/greyStar.png" alt="">
+            <img data-rating="4" class="star  img-fluid" src="/BeesBreakfast/Assets/greyStar.png" alt="">
+            <img data-rating="5" class="star img-fluid" src="/BeesBreakfast/Assets/greyStar.png" alt="">
+          </div>
+
+          <div class="nameContainer d-flex flex-row justify-content-between py-3">
+            <div class="form-group w-100">
+              <input class="form-control rounded" id="review-name" onkeyup="searchMobile()" type="input" placeholder="Name" aria-label="Name">
+            </div>
+            <button class="px-4" id="post">Post</button>
+          </div>
+
+          <div class="bottomForm d-flex flex-column justify-content-center align-items-center my-3">
+            <div class="form-group w-100">
+              <textarea class="form-control me-2 rounded" id="review-text" onkeyup="searchMobile()" type="input" placeholder="Enter Your Review Here" aria-label="Review" rows="5"></textarea>
+            </div>
+
+            <a class="my-4 border-0 w-50 py-3" href="/BeesBreakfast/Pages/reviews.html">See More Reviews</a>
+          </div>
+
+        </div>
+
+      </div>
+     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/BeesBreakfast/Sources/data.js"></script>
+    <script src="/BeesBreakfast/Sources/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB06pOIRXZ5Z3donqRuvXx8Zaq4-k_NCbI&libraries=places"></script>
+
+  </body>
+</html>

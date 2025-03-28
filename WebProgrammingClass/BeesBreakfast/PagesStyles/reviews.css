@@ -1,0 +1,75 @@
+:root {
+    /* Color Platte */
+    --tan: #FBF7EC;
+    --gold: #FBB100;
+    --paleYellow: #FDD466;
+    --darkTan: #FCE6B2;
+    --offWhite: #FDF2C3;
+    --offTan: #FCE6B2;
+
+}
+
+body {
+    background-color: var(--offTan);
+}
+
+section {
+    .navbar {
+        padding-top: 20px;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: x-large;
+        }
+    }
+
+    #arrow {
+        height: 30px;
+    }
+
+}
+
+.mainWrapper {
+    
+    .header {
+        h1 {
+            font-weight: 500;
+        }
+
+        span {
+            color: var(--gold);
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+    }
+
+    .reviews {
+        .topReview {
+            gap: 20px;
+            img {
+                height: 80px;
+                width: 80px;
+
+            }
+            p {
+                font-size: 1.5rem;
+            }
+        }
+
+        .bottomReview {
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+  
+
+   
+
+}
