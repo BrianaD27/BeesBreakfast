@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Favicon, Title, Css Sheet -->
+    <link rel="stylesheet" href="/BeesBreakfast/PagesStyles/reservations.css">
+    <link rel="shortcut icon" href="/BeesBreakfast/Assets/bee.png" type="image/x-icon">
+    <title>Bee's Breakfast</title>
+  </head>
+
+  <body>
+
+    <section class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid align-items-center justify-content-between d-flex">
+          <a class="navbar-brand fw-bold" href="/BeesBreakfast/Pages/index.html#main">
+            <img id="arrow" class="img-fluid" src="../Assets/rightArrow.png" alt=""> 
+            <!-- &lt;Back -->
+            Back To Home
+          </a>
+        </div>
+      </nav>
+
+      <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="mainWrapper d-flex justify-content-center align-items-center flex-column">
+          <div class="my-3 d-flex justify-content-center align-items-center flex-column">
+            <h1 class="">Want to <span>Bee</span>-Ahead of the wait?</h1>
+            <h4 class="">Make a Reservation with Us</h4>
+          </div>
+
+           
+          <div class="form-floating mb-3 ">
+            <input type="text" class="form-control" id="reservationEmail" placeholder="1234">
+            <label for="floatingInput">Email</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select class="form-select" id="attendees" aria-label="Floating label select example">
+              <option selected>0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+            </select>
+            <label for="floatingSelect">Number of People</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="reservationDate">
+            <label for="reservationDate">Date</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select class="form-select" id="reservationTime">
+              <option value="09:00:00">9:00 AM</option>
+              <option value="10:00:00">10:00 AM</option>
+              <option value="11:00:00">11:00 AM</option>
+              <option value="12:00:00">12:00 PM</option>
+              <option value="13:00:00">1:00 PM</option>
+              <option value="14:00:00">2:00 PM</option>
+              <option value="15:00:00">3:00 PM</option>
+              <option value="16:00:00">4:00 PM</option>
+              <option value="17:00:00">5:00 PM</option>
+            </select>
+            <label for="reservationTime">Time</label>
+          </div>
+          
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="phoneNumber" placeholder="123-456-7890">
+            <label for="reservationTime">Phone Number</label>
+          </div>
+
+          <!--Add these back later v-->
+            <!-- <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="userId" placeholder="123-456-7890">
+              <label for="reservationTime">User Id (U00001)</label>
+            </div> -->
+
+            <!-- <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="reservationId" placeholder="123-456-7890">
+              <label for="reservationTime">Reservation Id (R00001)</label>
+            </div> -->
+          
+          
+
+          <!-- <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" ></textarea>
+            <label for="floatingTextarea2">Comments & Requests</label>
+          </div> -->
+
+          <button class="btn btn-primary my-4 border-0 w-25 py-3" onclick="submitReservation()">Submit</button>
+
+          
+
+        </div>
+   
+
+      </div>
+    </section>
+
+    
+   
+    <!-- BootStrap Scripts: jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Js Script -->
+    <script src="/BeesBreakfast/Sources/script.js"></script>
+    <script src="/BeesBreakfast/Sources/reservations.js"></script>
+    </body>
+</html>

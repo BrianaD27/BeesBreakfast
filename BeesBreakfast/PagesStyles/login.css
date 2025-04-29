@@ -1,0 +1,74 @@
+:root {
+    /* Color Platte */
+    --tan: #FBF7EC;
+    --gold: #FBB100;
+    --paleYellow: #FDD466;
+    --darkTan: #FCE6B2;
+    --offWhite: #FDF2C3;
+}
+
+.mainWrapper {
+    background: url("../Assets/loginHexagonPattern.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--paleYellow);
+
+    .main {
+        height: 85%;
+        width: 45%;
+        background-color: var(--offWhite);
+        border: black 3px solid;
+        border-radius: 50px;
+
+        .title {
+            img {
+                width: 80px;
+            }
+
+            h2 {
+                font-weight: 700;
+
+                span {
+                    color: var(--gold);
+                }
+            }
+
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .form-floating {
+
+            input {
+                border: 3px solid var(--gold);
+                border-radius: 10px;
+                background-color: var(--offWhite);
+                
+            }
+
+        }
+
+
+        #link-1 {
+            text-decoration: underline;
+        }
+
+        #button {
+            background-color: var(--gold);
+            padding: 20px 80px;
+            border-radius: 1rem;  
+        }
+
+        #link-2 {
+            font-weight: 700;
+             span {
+                color: var(--gold);
+             }
+        }
+
+
+    }
+}
