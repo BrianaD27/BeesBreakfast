@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bee's Breakfast</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/BeesBreakfast/PagesStyles/style.css">
+    <link rel="icon" href="../Assets/Bee.png" type="image/png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB06pOIRXZ5Z3donqRuvXx8Zaq4-k_NCbI&libraries=places"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">
+          <img id="bee" src="../Assets/bee.png" alt=""> 
+          Bee's <span class="c">Breakfast</span>
+        </a>
+        <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <!-- [ADDED] Logout Button for user session reset -->
+            <li class="nav-item">
+              <button id="logoutBtn" class="btn btn-outline-danger ms-3">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile Upload Section -->
+    <div class="pfp-container" onclick="document.getElementById('file-input').click()">
+      <!-- [MODIFIED] Profile Picture - loads from localStorage if available -->
+      <img class="pfp img-fluid" id="pfp" src="/BeesBreakfast/Assets/blankPfp.jpeg" alt="Profile Picture">
+      <div class="pfp-overlay">Change <br>Photo</div>
+      <!-- [MODIFIED] File Input - changed ID from 'upload-file' to 'file-input' for JS compatibility -->
+      <input type="file" id="file-input" accept="image/*" style="display:none">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/BeesBreakfast/Sources/data.js"></script>
+    <script src="script_modified.js"></script> <!-- [UPDATED] Script with logout & avatar logic -->
+  </body>
+</html>
